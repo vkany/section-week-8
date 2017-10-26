@@ -35,10 +35,11 @@ def search_flickr_by_tags(tags):
         "format": "json",
         "api_key": FLICKR_API_KEY,
         "tags": tags,
-        "photo_id":photo_id,
+        "photo_id":search term,
         "per_page": 10,
         "nojsoncallback": 1
     }
+    params_diction.update(data)
 
     unique_ident = params_unique_combination(baseurl,params_diction)
     if unique_ident in CACHE_DICTION:
@@ -84,3 +85,4 @@ for photo in photos_list:
     # print(str(photo).encode('utf-8'))
 
 print()
+print("this is so hard")
