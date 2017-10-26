@@ -35,6 +35,7 @@ def search_flickr_by_tags(tags):
         "format": "json",
         "api_key": FLICKR_API_KEY,
         "tags": tags,
+        "photo_id":photo_id,
         "per_page": 10,
         "nojsoncallback": 1
     }
